@@ -17,7 +17,9 @@ const images = [
     { src: "images/sand-mountain-s.avif", url: "working-on-it.html" },
     { src: "images/sit-s.avif", url: "working-on-it.html" },
     { src: "images/sol-poente-s.avif", url: "working-on-it.html" },
-    { src: "images/stick-caldas-s.avif", url: "working-on-it.html" },    
+    { src: "images/stick-caldas-s.avif", url: "working-on-it.html" },
+    { src: "images/model-s.avif", url: "working-on-it.html" },
+
 ];
 
 const container = document.getElementById("image-container");
