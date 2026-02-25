@@ -159,3 +159,38 @@ overlay.addEventListener("click", (e) => {
     const link = e.target.closest("a");
     if (link) closeOverlay();
 });
+
+// Projects - about page
+
+/* document.querySelectorAll(".project").forEach(project => {
+
+  const imgElement = project.querySelector("img");
+  const images = project.dataset.images.split(",");
+  let currentIndex = 0;
+
+  project.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    imgElement.src = images[currentIndex];
+  });
+
+}); */
+
+// Projects – About page (safe version)
+
+document.querySelectorAll(".project").forEach(project => {
+
+  const imagesData = project.dataset.images;
+
+  // Skip projects without data-images
+  if (!imagesData) return;
+
+  const imgElement = project.querySelector("img");
+  const images = imagesData.split(",");
+  let currentIndex = 0;
+
+  project.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    imgElement.src = images[currentIndex];
+  });
+
+});
