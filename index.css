@@ -366,8 +366,9 @@ footer {
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 60px;
-  align-items: start;
-/*   margin-right: 180px; */
+  align-items: center;
+  margin-left: 180px;
+  margin-right: 180px;
 }
 
 .bio-content img {
@@ -376,10 +377,9 @@ footer {
 }
 
 p {
-  font-size: 110%;
+  font-size: 100%;
   line-height: 1.4;
-  text-align: justify;
-/*   font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif; */
+  text-align: left;
 }
 
 /* ========================= */
@@ -396,6 +396,7 @@ p {
 /* Basic project block */
 .project {
   position: relative;
+  bottom: 20px;
   cursor: pointer;
 }
 
@@ -428,8 +429,8 @@ p {
 
 .project-title {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 200px;
+  left: 20px;
   color: yellow;
   font-size: 1.1rem;
   font-weight: 600;
@@ -491,9 +492,13 @@ p {
   padding-left: 0;
 }
 
-.cv-list li {
-  margin-bottom: 0.5rem;
+.line-indent {
+  text-indent: 60px;
 }
+
+/* .cv-list li {
+  margin-bottom: 0.5rem;
+} */
 
 /* ========================= */
 /* RESPONSIVE */
