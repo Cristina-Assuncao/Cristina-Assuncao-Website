@@ -43,7 +43,7 @@ header {
 }
 
 .my-name:hover {
-  color: rgb(142, 17, 209);
+  color: yellow;
 }
 
 .hamburger {
@@ -437,7 +437,7 @@ p {
   position: absolute;
   top: 200px;
   left: 20px;
-  color: blue;
+  color: yellow;
   font-size: 1.1rem;
   font-weight: 600;
   opacity: 0;
