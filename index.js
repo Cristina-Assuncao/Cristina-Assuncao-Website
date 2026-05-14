@@ -201,3 +201,11 @@ document.querySelectorAll('.art-video').forEach(video => {
     video.play();
   });
 });
+
+const spinImage = document.getElementById("spinImage");
+
+spinImage.addEventListener("click", () => {
+  spinImage.classList.remove("spin");
+  void spinImage.offsetWidth; // restart animation
+  spinImage.classList.add("spin");
+});

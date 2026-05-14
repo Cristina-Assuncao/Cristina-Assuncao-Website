@@ -18,7 +18,8 @@ header {
   grid-template-columns: 1fr auto 1fr; /* left spacer | title | hamburger lane */
   align-items: center;
   background: #fafafa;
-  color: #333;
+  /* color: #333; */
+  color: #433e3e;
   padding: 50px;
   z-index: 20001;
 }
@@ -63,7 +64,7 @@ header {
   left: 10px;              /* matches padding */
   right: 10px;
   height: 3px;
-  background: #333;
+  background: #433e3e;
   border-radius: 2px;
   transition: transform 200ms ease, top 200ms ease, opacity 150ms ease, background-color 150ms ease;
 }
@@ -358,7 +359,7 @@ footer {
 
 .section h2 {
   font-size: 1.8rem;
-  color: #333;
+  color: #433e3e;
   margin-bottom: 60px;
   margin-left: 260px;
 }
@@ -380,6 +381,34 @@ footer {
   width: 300px;
   max-width: 100%;
   height: auto;
+}
+
+/* .rotating-image {
+  width: 300px;
+  height: auto;
+  display: block;
+  animation: spin 60s linear infinite;
+  transform-origin: center center;
+} */
+.rotating-image {
+  width: 300px;
+  height: auto;
+  display: block;
+  transform-origin: center center;
+  cursor: pointer;
+}
+
+.rotating-image.spin {
+  animation: spin 60s linear 1;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 p {
@@ -443,7 +472,7 @@ p {
   position: absolute;
   top: 200px;
   left: 20px;
-  color: yellow;
+  color: rgb(231, 25, 190);
   font-size: 1.1rem;
   font-weight: 600;
   opacity: 0;
