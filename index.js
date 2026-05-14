@@ -194,3 +194,10 @@ document.querySelectorAll(".project").forEach(project => {
   });
 
 });
+
+document.querySelectorAll('.art-video').forEach(video => {
+  video.addEventListener('click', () => {
+    video.currentTime = 0;
+    video.play();
+  });
+});

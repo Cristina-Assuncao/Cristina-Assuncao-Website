@@ -406,7 +406,12 @@ p {
   cursor: pointer;
 }
 
-.project img {
+.project video {
+  cursor: pointer;
+}
+
+.project img,
+.project video {
   width: 100%;
   height: auto;
   display: block;
@@ -431,6 +436,7 @@ p {
  /* background: rgba(0,0,0,0.4);*/
   opacity: 0;
   transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .project-title {
@@ -442,6 +448,7 @@ p {
   font-weight: 600;
   opacity: 0;
   transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .project:hover::after {
