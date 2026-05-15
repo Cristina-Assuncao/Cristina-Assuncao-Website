@@ -417,7 +417,7 @@ p {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 80px;
-  grid-auto-flow: unset;
+  grid-auto-flow:unset;
 }
 
 /* Basic project block */
@@ -446,19 +446,6 @@ p {
 
 /* Vertical emphasis */
 .tall { grid-row: span 2; }
-
-/* Controls for the scattered effect: nudges projects up and down, left and right >>>>>>>>>>>>>>> check how to remove them in @media */
-
-.project:nth-child(1) { margin-top: 60px; }
-
-.project:nth-child(2) { margin-left: 80px; }
-
-.project:nth-child(4) { margin-left: 80px; margin-top: 120px; }
-
-.project:nth-child(6) { margin-top: 40px; margin-left: 40px;}
-
-.project:nth-child(7) { margin-left: 100px; }
-
 
 /* Hover overlay */
 .project::after {
