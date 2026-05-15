@@ -73,7 +73,9 @@ header {
 .hamburger div:nth-child(2){ top: 19px; }
 .hamburger div:nth-child(3){ top: 28px; }
 
-.hamburger:hover div{ background-color: yellow; }
+.hamburger:hover div {
+  background-color: yellow;
+}
 
 /* active = X */
 .hamburger.active div:nth-child(1){
@@ -88,11 +90,7 @@ header {
   transform: rotate(-45deg);
 }
 
-.hamburger:hover div {
-  background-color: yellow;
-}
-
-/* Vertival bar behind open title */
+/* Vertical bar behind open title */
 #title-bar {
   position: fixed;
   top: 0;
@@ -425,19 +423,30 @@ p {
 /* Basic project block */
 .project {
   position: relative;
-  bottom: 20px;
+  /* bottom: 20px; */
   cursor: pointer;
+  overflow: hidden; /* for aspect-ratio on .project */
 }
 
 .project img,
 .project video {
   width: 100%;
   height: auto;
+  /* height: 100%; */ /* for aspect-ratio on .project > to prevent the glitch needed? testing */
   display: block;
+  object-fit: contain; /* for aspect-ratio on .project */
 }
 
 .project video {
   cursor: pointer;
+}
+
+.ratio-landscape {
+  aspect-ratio: 4 / 3;
+}
+
+.ratio-portrait {
+  aspect-ratio: 3 / 4;
 }
 
 /* Width system */
@@ -462,7 +471,10 @@ p {
 
 .project:nth-child(6) { transform: translateX(60px) translateY(100px); }
 
-.project:nth-child(7) { transform: translateX(160px) translateY(0px); }
+.project:nth-child(7) { transform: translateX(160px); }
+
+.project:nth-child(13) { transform: translateX(100px) translateY(40px); }
+
 
 
 /* Hover overlay */
@@ -506,14 +518,6 @@ p {
   font-weight: 300;
   line-height: 1.5;
 }
-
-/* .cv-container h2 {
-  text-align: left;
-  font-weight: 500;
-  margin-top: 20rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-} */
 
 .cv-subheading {
   font-size: 1.1rem;
@@ -565,10 +569,25 @@ p {
 
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .w-3, .w-4, .w-6 {
     grid-column: span 2;
+  }
+}
+
+@media (max-width: 1000px) {
+  .project:nth-child(1),
+  .project:nth-child(2),
+  .project:nth-child(4),
+  .project:nth-child(5),
+  .project:nth-child(6),
+  .project:nth-child(7),
+  .project:nth-child(13) {
+    margin-top: 0;
+    margin-left: 0;
+    transform: none;
   }
 }
 
