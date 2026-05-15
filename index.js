@@ -209,3 +209,4 @@ spinImage.addEventListener("click", () => {
   void spinImage.offsetWidth; // restart animation
   spinImage.classList.add("spin");
 });
+
