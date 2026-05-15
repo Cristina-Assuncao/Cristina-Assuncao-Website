@@ -416,8 +416,8 @@ p {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 30px;
-  grid-auto-flow: dense;
+  gap: 80px;
+  grid-auto-flow:unset;
 }
 
 /* Basic project block */
